@@ -11,7 +11,7 @@ then open 127.0.0.1:4567
 
 format for log.json:
 
-```json
+```javascript
 [
   {
     sprites: [
