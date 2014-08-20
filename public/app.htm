@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<meta charset="utf-8"> 
+
+<link rel="stylesheet" type="text/css" href="player.css">
+<link rel="stylesheet" type="text/css" href="sprites.css">
+<link rel="stylesheet" type="text/css" href="lib/jsontree.css">
+
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+
+<script src="player.js"></script>
+<script src="renderer.js"></script>
+<script src="app.js"></script>
+<script src="lib/jsontree.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+<div class="pane">
+<div id="field"></div>
+<div id="control">
+  <div id="frame-sld"></div>
+  <input type="checkbox" id="play-btn"><label for="play-btn">_</label>
+  <span id="btns">
+    <button id="prev-btn">◂◂</button>
+    <input type="text" id="frame-inp">
+    <button id="next-btn">▸▸</button>
+  </span>
+  <button id="upd-btn">@</button>
+  <span>speed: </span>
+  <div id="speed-sld" class="inline slider"></div>
+  <span id="coords"></span>
+</div>
+<div id="info"></div>
+</div>
+<div class="pane">
+  <div id="tree"></div>
+</div>
+<div id="templates">
+  <div class="body player"></div>
+  <div class="body puck"></div>
+  <div class="body cage"></div>
+</div>

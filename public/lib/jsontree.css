@@ -1,0 +1,41 @@
+.tree-cont {
+  cursor: default;
+  padding-left: 10px;
+}
+
+.tree-obj-caption {
+  cursor: pointer;
+}
+
+.tree-opened {
+  display: none;
+}
+
+.tree-expand > .tree-opened {
+  display: block;
+}
+
+.tree-expand > .tree-closed {
+  display: none;
+}
+
+.tree-expand > .tree-obj-caption > .tree-opened {
+  display: block;
+}
+
+.tree-expand > .tree-obj-caption > .tree-closed {
+  display: none;
+}
+
+.tree-children {
+  margin-left: 10px;
+}
+
+.tree-bullet {
+  position: relative;
+}
+
+.tree-bullet > span {
+  position: absolute;
+  left: -0.7em;
+}

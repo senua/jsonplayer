@@ -1,0 +1,51 @@
+/* sizes */
+
+#field {
+  width: 500px;
+  height: 300px;
+}
+
+.pane {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#control input {
+  padding: 0;
+  -webkit-appearance: none;
+  outline: 0;
+  height: 1.75em;
+  width: 4em;
+}
+
+#frame-sld {
+  margin: 0.5em;
+}
+
+/* concept */
+#templates {
+  display: none;
+}
+
+#field {
+  position: relative;
+}
+
+.inline.slider {
+  display: inline-block;
+  width: 100px;
+  vertical-align: middle;
+}
+
+/* style */
+* {
+  font-size: 10px;
+}
+#field {
+  border: 1px solid black;
+}
+
+#tree {
+  font-family: monospace;
+}
+
