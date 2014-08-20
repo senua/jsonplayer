@@ -39,6 +39,12 @@
   border-radius: 50%;
 }
 
+.body.player .kk {
+  width: 50px;
+  height: 1px;
+  background: black;
+}
+
 .body.puck {
   border-radius: 50%;
   background: black;
