@@ -16,6 +16,14 @@ function Player(renderer, frames) {
     renderer.render(frames[pos], pos);
   }).bind(this);
 
+  this.changed = function() {
+    this.change({
+      pos: pos,
+      playing: playing,
+      speed: speed
+    });
+  }
+
   this.render = function() {
     renderer.render(frames[pos], pos);
   }
@@ -33,11 +41,13 @@ function Player(renderer, frames) {
   this.play = function() {
     intervalId = setInterval(playFrame, interval / speed);
     playing = true;
+    this.changed();
   }
 
   this.stop = function() {
     clearInterval(intervalId);
     playing = false;
+    this.changed();
   }
 
   this.next = function() {
@@ -64,5 +74,7 @@ function Player(renderer, frames) {
       this.play();
     }
   }
+
+  this.change = function() {}
 }
 

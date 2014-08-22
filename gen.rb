@@ -13,4 +13,6 @@ res[0][:sprites] << {id: 100, type: 'puck', x: 30, y: 30, info: 100};
 res[0][:sprites]  << {id: 101, type: 'cage', x: 70, y: 30, info: 101};
 res[0][:sprites]  << {id: 102, type: 'player', class: 'me pl0', x: 120, y: 30, info: 102};
 
-puts JSON.dump(res)
+log = JSON.pretty_generate(res)
+File.write('log.json', log);
+File.write('public/frames.js', 'window.frames = ' + log + ";\n");

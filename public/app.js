@@ -7,6 +7,15 @@ $(function() {
 
   window.player = new Player(rend, []);
 
+  function setFrames(json) {
+    window.frames = json;
+    player.setFrames(json);
+    $('#frame-sld').slider('option', 'max', frames.length);
+  }
+
+  function loadJson(url) {
+  }
+
 /* field */
   $('#field')
   .mousemove(function(e) {
@@ -39,14 +48,12 @@ $(function() {
 
   $('#prev-btn').click(function() {player.prev()});
   $('#next-btn').click(function() {player.next()});
+
   $('#upd-btn').button({icons: {primary: 'ui-icon-arrowrefresh-1-w'}, text: false})
     .click(function() {
-      $.getJSON(new Date().getTime() + '/log.json', function(json) {
-        window.frames = json;
-        player.setFrames(json);
-        $('#frame-sld').slider('option', 'max', frames.length);
-      });
+      $.getJSON(new Date().getTime() + '/log.json', setFrames);
     }).click();
+
 
   $('#btns').buttonset({items: "button, input"});
   
@@ -102,5 +109,10 @@ $(function() {
       case 37: 
       case 39: rend.fast(false); break;
     }
-  })
-})
+  });
+
+
+/* init */
+  setFrames(frames);
+
+});
